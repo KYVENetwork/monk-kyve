@@ -1,0 +1,26 @@
+namespace: /kyve
+
+core:
+  defines: runnable
+  version: 0.0.1
+  containers:
+    defines: containers
+    app:
+      bash: <- `yarn start --pool ${pool} --stake ${stake} --private-key ${private-key} --endpoint ${endpoint}`
+
+  variables:
+    defines: variables
+    pool:
+      type: string
+    stake:
+      type: int
+    private-key:
+      type: string
+    endpoint:
+      type: string
+      value: https://rpc.testnet.moonbeam.network
+
+  metadata:
+    defines: metadata
+    website: https://kyve.network
+    publisher: KYVE

@@ -1,0 +1,8 @@
+namespace: /kyve
+
+evm:
+  defines: runnable
+  inherits: kyve/core
+  containers:
+    app:
+      image: kyve/evm:latest
